@@ -1,5 +1,12 @@
 import { ArrowForwardIcon } from '@chakra-ui/icons'
-import { Flex, Box, Heading, Text, useColorMode, Button } from '@chakra-ui/react'
+import {
+  Flex,
+  Box,
+  Heading,
+  Text,
+  useColorMode,
+  Button,
+} from '@chakra-ui/react'
 import Link from 'next/link'
 
 export const Greeting = () => {
@@ -8,17 +15,29 @@ export const Greeting = () => {
   return (
     <Flex h="100%" w="100%" align="center" justify="center">
       <Box as="section" mt="50" textAlign="left" p="30px">
-        <Heading fontSize="48px" color={colorMode === 'dark' ? "yellow.500" : '#00c2d7'} textTransform="uppercase">Hello, there!</Heading>
-        <Heading as="h3" fontSize="24px" color={colorMode === 'dark' ? 'white' : 'gray.700'} textTransform="uppercase" >Another Next.js starter blog!</Heading>
+        <Heading
+          fontSize="48px"
+          color={colorMode === 'dark' ? 'yellow.500' : '#00c2d7'}
+          textTransform="uppercase"
+        >
+          Hello, there!
+        </Heading>
+        <Heading
+          as="h3"
+          fontSize="24px"
+          color={colorMode === 'dark' ? 'white' : 'gray.700'}
+          textTransform="uppercase"
+        >
+          software engineer journaling
+        </Heading>
         <Text
           maxW="700px"
           pt="40px"
           color={colorMode === 'dark' ? '#9ba1a6' : 'hsl(206 6.0% 43.5%)'}
           fontSize="24px"
         >
-          This is a starter theme created on top of Next.js to help you start
-          your blog right now. Feel free to clone it, download
-          it, modify it as you please.
+          “No problem is too small or too trivial if we can really do something
+          about it.” — Richard P. Feynman.
         </Text>
         <Button
           variant="outline"
@@ -33,11 +52,10 @@ export const Greeting = () => {
           _hover={{
             bg: 'yellow.500',
             color: 'white',
-          }}>
+          }}
+        >
           <Link href="/blog">
-            <a>
-              Go to blog
-            </a>
+            <a>Go to blog</a>
           </Link>
         </Button>
       </Box>

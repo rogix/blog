@@ -1,4 +1,11 @@
-import { Text, Heading, Container, Flex, Box, Link as PostLink } from '@chakra-ui/react'
+import {
+  Text,
+  Heading,
+  Container,
+  Flex,
+  Box,
+  Link as PostLink,
+} from '@chakra-ui/react'
 import Link from 'next/link'
 
 import type { Frontmatter } from '../../types/frontmatter'
@@ -16,7 +23,7 @@ const Blog = ({ frontmatters }: Props) => {
       <Container mt="10" maxW="container.sm">
         <Flex align="center" justify="center" flexDir="column" mb="40px">
           <Heading pb="10px">Blog</Heading>
-          <Text>Let us talk about it</Text>
+          <Text>Another one</Text>
         </Flex>
         {frontmatters.map((frontmatter, index) => {
           return (
@@ -28,7 +35,9 @@ const Blog = ({ frontmatters }: Props) => {
                   </Box>
                 </PostLink>
               </Link>
-              <Flex color="gray.500">{frontmatter.publishedAt} by {frontmatter.author}</Flex>
+              <Flex color="gray.500">
+                {frontmatter.publishedAt} by {frontmatter.author}
+              </Flex>
               <Flex color="gray">{frontmatter.description}</Flex>
             </Box>
           )

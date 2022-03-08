@@ -22,6 +22,7 @@ const CodeBlock = ({ children, className }) => {
             padding: '20px',
             backgroundColor: 'none',
             display: 'block',
+            overflowX: 'scroll',
           }}
         >
           {tokens.map((line, i) => {
