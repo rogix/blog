@@ -27,6 +27,7 @@ export const MDXcomponents = {
     return (
       <Box
         as="pre"
+        overflowX="auto"
         boxShadow={
           colorMode === 'dark'
             ? 'rgb(49, 53, 56) 0 0 0 1px'
